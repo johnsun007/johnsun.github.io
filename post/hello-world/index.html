@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Hello World | Supersun</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
+<link rel="shortcut icon" href="https://supersun.github.io/favicon.ico?v=1587029070936">
+<link rel="stylesheet" href="https://supersun.github.io/styles/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="用产品思维和方法建个博客😂
+
+前言
+一直对自己的博客搭建有执念（最早是wordpress，后来沉迷于markdown）；
+虽然我这个产品狗不是开发出身，对代码世界一直还是充满敬畏；
+最近赋闲在家，决定认真搞定这个事。
+需求点
+一句话需求
+..." />
+    <meta name="keywords" content="产品,竞品调研,个人建站,WEB端" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://supersun.github.io">
+        <img src="https://supersun.github.io/images/avatar.png?v=1587029070936" class="site-logo">
+        <h1 class="site-title">Supersun</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="post/xiang-mu-ji" class="site-nav">
+            项目集
+          </a>
+        
+      
+        
+          <a href="tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="post/about" class="site-nav">
+            关于小站
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <strong>我想成为小超人</strong>
+    </div>
+    <div class="site-footer">
+      ©2020 京ICP备xxxxx号-x Powered by <a href="https://gridea.dev/">Gridea</a> | <a class="rss" href="https://supersun.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Hello World</h2>
+            <div class="post-date">2020-04-09</div>
+            
+              <div class="feature-container" style="background-image: url('https://supersun.github.io/post-images/hello-world.JPG')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>用产品思维和方法建个博客😂</p>
+<!-- more -->
+<h1 id="前言">前言</h1>
+<p>一直对自己的博客搭建有执念（最早是wordpress，后来沉迷于markdown）；<br>
+虽然我这个产品狗不是开发出身，对代码世界一直还是充满敬畏；<br>
+最近赋闲在家，决定认真搞定这个事。</p>
+<h1 id="需求点">需求点</h1>
+<h2 id="一句话需求">一句话需求</h2>
+<p>短时间完成博客网站的搭建用于日常产研学习知识库的博文积累、工作文档留档及个人简历展示</p>
+<h2 id="用户故事拆解">用户故事拆解</h2>
+<ul>
+<li>有自己的博客主页</li>
+<li>该博客需求到开发上线由本人单独完成</li>
+<li>博客可以让任何人看到</li>
+<li>博客可以在任何地方编辑更新</li>
+<li>博客在任何地方打开看到的页面是友好的流畅的</li>
+<li>支持markdown语言</li>
+<li>自己的数据库可以同步备份所有博文</li>
+<li>博客域名解析在自己的域名下</li>
+<li>尽短的时间完成上线</li>
+</ul>
+<h1 id="竞品调研分析">竞品调研分析</h1>
+<p>对国内外主流的博客系统及文档类产品进行简单整理，并按照用户故事清单进行比对<img src="https://supersun.github.io/post-images/1586529981616.png" alt="" loading="lazy"><br>
+以上，基于markdown的博客框架完全符合我的需求，三个产品细节差别对我来说不大：</p>
+<ul>
+<li>hexo 有中文社群且受众最广、主体丰富；</li>
+<li>hugo 据说最轻量快捷；</li>
+<li>gridea 是中文开发者开发运营，有客户端支持，上手容易。<br>
+我最终选择了小而美的 gridea，附上<a href="https://gridea.dev/gridea-0.9.0/">产品介绍</a>。</li>
+</ul>
+<h1 id="开发上线">开发上线</h1>
+<p>gridea甚至省去了我的开发成本和时间，这里就直接贴官网的FAQ文档了：<br>
+<em>step1 原始工具</em><br>
+<a href="https://gridea.dev/#started">官网下载客户端</a><br>
+<em>step2 本地写作</em><br>
+安装完毕后，客户端本身就预设好了几篇引导教程文章、主题。<img src="https://supersun.github.io/post-images/1586685720515.png" alt="" loading="lazy"><br>
+可以直接上手本地进行主题样式和文章的预览。到这部分为止，本地化的写作需求已经完全满足了。<br>
+<em>step3 联网上线博客</em><br>
+现在到了对外展示自己博客的阶段，有三种方式可供参考</p>
+<ol>
+<li>【无需自有域名】远程连接到第三方代码托管服务平台 github pages 或 coding pages ，按照教程走就ok，省去了购买服务器、域名及维护的成本。</li>
+<li>【自有域名绑定】对于小白来说这块可能有一点门槛，需要了解域名解析方式。你可以选择直接解析域名至github pages 或 coding pages，也可以使用客户端的“远程连接-SFTP”将文档和主题都到自己的服务器，然后自有域名解析自己的服务器IP即可。<a href="https://gridea.dev/gridea-start/">详细官方教程</a></li>
+<li>【进阶：关于域名备案】因为在国内的微信等社交内容平台对于没有收录过的网站显示不太友好，经常申请恢复网页显示还需要备案号，如果有这方面需求的可以选择购买阿里云的虚拟主机+域名，便于备案和维护。成本最低可以降至300元/年左右。</li>
+</ol>
+<blockquote>
+<p>Done！整个新建博客过程小半天时间都不到！</p>
+</blockquote>
+<h1 id="关于文章的编辑更新">关于文章的编辑更新</h1>
+<p>我的需求是“博客可以在任何地方编辑更新”，这里gridea暂时只支持电脑客户端，我觉得问题不大。如果你又多台电脑跨设备编辑博客文章的需求，可以将文件目录移至onedrive、icloud或者群晖这种云同步服务器<br>
+的根目录下。</p>
+<h1 id="可拓展性">可拓展性</h1>
+<p>主题：官方支持自定义和二次开发，自由度很高<br>
+markdown语法：目前看基础的语法支持没问题，像流程图这种复杂语法的需求太小众了😂</p>
+<h1 id="小结">小结</h1>
+<p>由于之前建站踩过许多坑，深知大繁至简的道理。日常作为产品经理这个岗位进行产品设计时的原则也是最小可用性原则。最短时间最高效率解决核心需求才是最佳选择。所以这次我没有选择重复造轮子，真香🤣。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://supersun.github.io/tag/72lBnvlNg/" class="tag">
+                    产品
+                  </a>
+                
+                  <a href="https://supersun.github.io/tag/5ZlIzARHqi/" class="tag">
+                    竞品调研
+                  </a>
+                
+                  <a href="https://supersun.github.io/tag/2qrJfS2G27/" class="tag">
+                    个人建站
+                  </a>
+                
+                  <a href="https://supersun.github.io/tag/M5npPJKxkX/" class="tag">
+                    WEB端
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://supersun.github.io/post/about/">
+                  <h3 class="post-title">
+                    了解我和小站请猛戳！👇
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
